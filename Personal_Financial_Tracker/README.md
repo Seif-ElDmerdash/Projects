@@ -1,35 +1,95 @@
 # Personal Finance Tracker
 
-## Description
-The Personal Finance Tracker is a software program that provides a simple and straightforward way to keep records of your personal finances. It creates one place for all the user’s financial records, allowing them to view all the earnings and transactions that have taken place, view how much they spend based on data entry, categorize the transactions by their spending habits, and present the data visually. 
+## Overview
 
-It was collaboratively developed by **Badr Muhammad** (Team Leader & GUI Developer), **Karim ElBolok** (Co-GUI Developer & Visualisation Lead), and **Seif El Dmerdash & Youssef Maged** (BackEnd Developers). Built using CustomTkinter for a clean interface and Matplotlib for data visualization, the project's foundational development was supported by concepts from Harvard's CS50P introductory course for Python.
+A desktop-based personal finance management application built with Python. The Personal Finance Tracker provides users with a centralized platform to record transactions, monitor spending habits, set budget limits, and visualize financial data through interactive charts and detailed reports.
 
-## Features
-* **Accurate Data:** As soon as the user enters information into the program, it provides them with calculated accurate net balances in real-time.
-* **User-friendly Design:** The program is built to be as user-friendly as possible with a clean and simple interface with very little clutter.
-* **Visual Representation of Spending:** The pie chart feature provides users with a simple, concise and visual way to see how much they spend by category, at a glance.
+## What This Project Does
 
-## Prerequisites
-* Python 3.x
-* `customtkinter`
-* `matplotlib`
+This application empowers users to gain control over their personal finances by:
 
-## Usage
-How to use the software:
-1. **Launch:** Run the script. You will see your initial balances (set to your budget by default) displayed on top.
-2. **Set Budgets:** Input the limits for each category in set category budgets.
-3. **Add Transaction:** 
-   * Select from the drop-down menu.
-   * Input the Amount in the entry box.
-   * Depending on the user’s choice, it will automatically assign the transaction as an Expense or an Income. 
-   * Click "Add Transaction.". The balance will be updated immediately.
-4. **Navigate Views:**
-   * The "View History" button will allow you to see the chronological order of all movements.
-   * Click "Detailed Summary" for quick calculation of total money in vs. money out.
-   * Click on "View Pie Chart" to view the graphical categorization of your expenditure.
+- **Recording Transactions** – Log all income and expenses with timestamps and category classification
+- **Real-Time Balance Tracking** – Instant calculation and display of current net balance
+- **Budget Management** – Set spending limits for each category and monitor adherence
+- **Spending Analytics** – View comprehensive spending patterns with visual pie charts
+- **Transaction History** – Access chronological records of all financial movements
+- **Detailed Summaries** – Generate quick reports showing total income vs. total expenses
 
-## Project Structure
-* `Personal_Financial_Tracker.py`: The main script that runs the application, containing the GUI framework built with CustomTkinter and the backend functions.
-* `finance.csv`: A database file initialized by the program to store all transaction records, including headers for date, description, amount, type, Total_balance, and Net_balance.
-* `Summary.csv`: A separate database file created to store summarized spending data across categories against their respective limits.
+## Key Features
+
+- **Accurate Real-Time Data** – Automatic calculation of net balances immediately upon transaction entry
+- **User-Friendly Interface** – Clean, intuitive design with minimal clutter built using CustomTkinter
+- **Visual Spending Breakdown** – Pie chart visualization for easy understanding of spending distribution by category
+- **Category-Based Organization** – Automatic categorization of transactions based on user selection
+- **Transaction Categorization** – Flexible category system supporting both income and expense tracking
+- **Budget Alerts** – Track spending against defined category limits
+
+## Prerequisites & Installation
+
+### Requirements
+- Python 3.x
+- `customtkinter` – Modern GUI framework
+- `matplotlib` – Data visualization and charting
+
+### Setup
+
+```bash
+pip install customtkinter matplotlib
+```
+
+## Usage Guide
+
+### Launching the Application
+
+```bash
+python Personal_Financial_Tracker.py
+```
+
+### Step-by-Step Guide
+
+1. **Initial Setup**
+   - Upon launch, view your current balance (default set to your defined budget)
+   - Set spending limits for each category under "Set Category Budgets"
+
+2. **Adding Transactions**
+   - Select a category from the dropdown menu
+   - Enter the transaction amount
+   - System automatically classifies as Income or Expense based on selection
+   - Click "Add Transaction" to record (balance updates immediately)
+
+3. **Viewing Financial Data**
+   - **View History** – See all transactions in chronological order with full details
+   - **Detailed Summary** – Quick overview of total income vs. total expenses
+   - **View Pie Chart** – Visual breakdown of spending by category
+
+4. **Budget Monitoring**
+   - Compare actual spending against set category limits
+   - Track progress toward financial goals
+
+## Project Architecture
+
+| Component | Description |
+|-----------|-------------|
+| `Personal_Financial_Tracker.py` | Main application script containing GUI framework (CustomTkinter) and backend logic |
+| `finance.csv` | Transaction database storing date, description, amount, type, and balances |
+| `Summary.csv` | Summary database for categorized spending totals vs. budget limits |
+
+### Data Storage
+- **finance.csv** – Record: Date, Description, Amount, Type (Income/Expense), Total Balance, Net Balance
+- **Summary.csv** – Record: Category, Total Spending, Budget Limit, Remaining Budget
+
+## Technology Stack
+
+- **GUI Framework** – CustomTkinter for modern, responsive interface
+- **Data Visualization** – Matplotlib for charts and graphs
+- **Data Storage** – CSV files for persistent transaction records
+- **Language** – Python 3.x
+
+## Contributors
+
+- **Badr Muhammad** – Team Leader & GUI Developer
+- **Karim ElBolok** – Co-GUI Developer & Visualization Lead
+- **Seif El Dmerdash** – Backend Developer
+- **Youssef Maged** – Backend Developer
+
+*Project built with foundational concepts from Harvard's CS50P introductory Python course.*
